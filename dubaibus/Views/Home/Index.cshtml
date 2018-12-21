@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* Home Wraper is in _Layout File *@
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
+    <div class="visible-xs hidden-sm owl-hidden md hidden-lg col-xs-12">
+        <div class="jumbotron white-background index-sign-div">
+            <form class="contact-form" method="post" action="/Home/Booking">
+                <h3>Booking</h3>
+                <label class="signup-label">Name</label>
+                <br />
+                <input type="text" class="input" name="Name" placeholder="Full Name" />
+                <br />
+                <label class="signup-label">Email</label>
+                <br />
+                <input type="email" name="mail" class="input" placeholder="you@example.com" />
+                <br />
+                <label class="signup-label">Phone#</label>
+                <input type="text" name="phone" class="input" placeholder="Phone#" />
+                <label class="signup-label">Date</label>
+                <input type="date" name="bookdate" class="input" placeholder="Booking date" />
+                <label class="signup-label">Select Transport</label>
+                <select name="bus" class="form-control" style="background-color: #edeeef">
+                    <option>SELECT YOUR TRANSPORT</option>
+                    <option value="15 Seat Toyota Hiroof Model 201">15 Seat Toyota Hiroof Model 2016</option>">
+                    <option value="15 Seat Toyota Hiroof Model 201">15 Seat Toyota Hiroof Model 2016</option>
+                    <option value="30 Seat Coaster Model 2016">30 Seat Coaster Model 2016</option>
+                    <option value="35 Seat Luxury King Long Bus">35 Seat Luxury King Long Bus</option>
+                    <option value="50 Seat King Long Luxury Bus">50 Seat King Long Luxury Bus</option>
+
+                </select>
+                <label class="signup-label">Booking Details</label>
+                <textarea name="description" class="input" placeholder="Enter Details here..."></textarea>
+                <button class="main-btn btn-block blue-g-btn" onclick="alert('Thank you For Your Booking. Soon You will  Recieve Confirmation Email!');">
+                    <b>Book Now</b>
+                </button>
+
+                <br />
+            </form>
+        </div>
+    </div>
+</div>
