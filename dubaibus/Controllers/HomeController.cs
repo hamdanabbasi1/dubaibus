@@ -15,10 +15,6 @@ namespace dubaibus.Controllers
             return View();
         }
        
-        public ActionResult Contact()
-        {
-            return View();
-        }
 
         public ActionResult Booking(string name, string mail, string phone, string bookdate, string description, string bus)
         {

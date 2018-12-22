@@ -1,8 +1,4 @@
-﻿
-@{
-    ViewBag.Title = "_LayoutNoBackground";
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title - Luxury Art Passenger Transport</title>
@@ -50,12 +46,12 @@
             <div class="container">
                 <div class="navbar-header">
                     <!-- Logo -->
-                    <div class="navbar-brand">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">
-                            <img class="logo" src="~/images/luxury.jpg" alt="logo">
-                            <img class="logo-alt" src="~/images/luxury.jpg" alt="logo">
-                        </a>
-                    </div>
+                    <a href="/">
+                        <div class="navbar-brand">
+                            <img class="logo" src="~/images/luxury.png" alt="logo">
+                            <img class="logo-alt" src="~/images/luxury.png" alt="logo">
+                        </div>
+                    </a>
                     <!-- /Logo -->
                     <!-- Collapse nav button -->
                     <div class="nav-collapse">
@@ -65,12 +61,12 @@
                 </div>
                 <!--  Main navigation  -->
                 <ul class="main-nav nav navbar-nav navbar-right">
-                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")"><a href="/Home/Index">Home</a></li>
-                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "AboutUs" ? "active" : "")"><a href="/About/AboutUs">About</a></li>
-                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Service" ? "active" : "")"><a href="/Service/Services">Services</a></li>
-                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Offers" ? "active" : "")"><a href="/Offer/Offers">Offers</a></li>
-                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Partners" ? "active" : "")"><a href="/Service/Partners">Partners</a></li>
-                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "ContactUs" ? "active" : "")"><a href="/Home/Contact">Contact</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")"><a href="/">Home</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "AboutUs" ? "active" : "")"><a href="/AboutUs">About</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Services" ? "active" : "")"><a href="/Services">Services</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Offers" ? "active" : "")"><a href="/Offers">Offers</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Partners" ? "active" : "")"><a href="/Partners">Partners</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "ContactUs" ? "active" : "")"><a href="/ContactUs">Contact</a></li>
                 </ul>
                 <!-- /Main navigation -->
                 @*@await Html.PartialAsync("_LoginPartial")*@
@@ -97,7 +93,9 @@
                 <div class="col-md-push-4 col-md-4 col-xs-12">
 
                     <div class="center">
-                        <img style="height:70px;" src="~/images/luxury.png" alt="">
+                        <a href="/">
+                            <img style="height:70px;" src="~/images/luxury.png" alt="">
+                        </a>
                     </div>
 
                     <!-- footer copyright -->

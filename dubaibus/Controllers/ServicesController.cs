@@ -6,18 +6,10 @@ using System.Web.Mvc;
 
 namespace dubaibus.Controllers
 {
-    public class ServiceController : Controller
+    public class ServicesController : Controller
     {
         // GET: Service
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult Services()
-        {
-            return View();
-        }
-        public ActionResult Partners()
         {
             return View();
         }

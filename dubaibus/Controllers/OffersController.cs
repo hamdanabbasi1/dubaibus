@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace dubaibus.Controllers
 {
-    public class AboutController : Controller
+    public class OffersController : Controller
     {
-        // GET: About
+        // GET: Offer
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult AboutUs()
         {
             return View();
         }
