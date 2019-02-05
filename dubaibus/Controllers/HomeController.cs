@@ -20,31 +20,26 @@ namespace dubaibus.Controllers
         {
 
             var fromEmail = new MailAddress("admin@luxuryarttransport.com");
-            var toEmail = new MailAddress("fawadbintariq3@gmail.com");
+            var toEmail = new MailAddress("admin@luxuryarttransport.com");
             var fromEmailPassword = "LuxuryTr@nsport9";
             MailMessage myMessage = new MailMessage();
 
             string subject = "Booking Request";
             string body = "<br/><br/><h2>Your have new booking Request!!</h2><br/><br/> <h1>FullName:</h1>" + name + "<br/><br/> <h1>Email:</h1>" + mail + "<br/><br/><h1>Phone:</h1>" + phone + "<br/><br/><h1>bookdate:</h1>" + bookdate + "<br/><br/><h1>Booking Transport:</h1>" + bus + "<br/><br/><h1>Booking Details:</h1>" + description;
-            var smtp = new SmtpClient
-            {
-                Host = "smtpout.asia.secureserver.net",
-                Port = 25,
-                EnableSsl = false,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromEmail.Address, fromEmailPassword)
 
-            };
-            //relay-hosting.secureserver.net
-            using (var message = new MailMessage(fromEmail, toEmail)
-            {
-                Subject = subject,
-                Body = body,
-                IsBodyHtml = true
-            })
-            smtp.Send(message);
-            smtp.Dispose();
+
+            MailMessage msg = new MailMessage(fromEmail, toEmail);
+            msg.Subject = subject;
+            msg.Body = body;
+            msg.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient();
+            client.Host = "relay-hosting.secureserver.net";
+            client.Port = 25;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential("admin@luxuryarttransport.com", fromEmailPassword);
+            //Send the msgs  
+            client.Send(msg);
+            client.Dispose();
             return RedirectToAction("Index");
         }
 
